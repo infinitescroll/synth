@@ -60,7 +60,7 @@ contract Synth is ERC721, Ownable{
         _setShard(tokenId, shard);
     }
 
-    function getShard(uint256 tokenId) public returns(address){
+    function getShard(uint256 tokenId) public view returns(address){
         return _synthShards[tokenId];
     }
 

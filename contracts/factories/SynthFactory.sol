@@ -35,7 +35,7 @@ contract SynthFactory is Ownable {
     }
 
     function createArtwork(uint256 supply, string calldata _tokenURI, string calldata name, string calldata symbol) external onlyOwner {
-        Shard shard = new Shard(msg.sender, supply, name, symbol);
+        Shard shard = new Shard(supply, name, symbol);
         nft.mint(msg.sender, _tokenURI, address(shard));
         emit ArtworkCreated(address(shard), nft.totalSupply());
     }
