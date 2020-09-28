@@ -9,6 +9,6 @@ contract Shard is ERC777, Ownable {
     // Add operator support?
     constructor(uint256 supply, string memory name, string memory symbol) public ERC777(name, symbol, new address[](0)){
         // This is the only way to mint; this is how we regulate total supply
-        //_mint(msg.sender, supply, new bytes(0x0), new bytes(0x0));
+        _mint(msg.sender, supply, new bytes(0x0), new bytes(0x0));
     }
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { DrizzleContext } from "@drizzle/react-plugin";
 import { Drizzle } from "@drizzle/store";
-import { optionsLocal, optionsRopsten } from "./drizzleOptions.js";
+import { optionsLocal /*optionsRopsten*/ } from "./drizzleOptions.js";
 import MyComponent from "./MyComponent";
 import "./App.css";
 
 // Switch to optionsRopsten to work with Ropsten
-const drizzle = new Drizzle(optionsRopsten);
+const drizzle = new Drizzle(optionsLocal);
 
 const App = () => {
   return (

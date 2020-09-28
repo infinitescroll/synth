@@ -29,6 +29,14 @@ export default ({ drizzle, drizzleState }) => {
             contract="SynthFactory"
             method="length"
           />
+          <br/>
+          <strong>Owner: </strong>
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="SynthFactory"
+            method="owner"
+          />
         </p>
         <h3>Create Artwork</h3>
         <ContractForm
